@@ -1,0 +1,102 @@
+body,
+button {
+	font-family: $secondary-font;
+	color: $color-black;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> #content {
+		flex: 1 1 auto;
+	}
+	> * {
+		min-width: 0;
+	}
+}
+
+body:not(.single-post, .page-template-privacy-policy) {
+	.wrapper {
+		overflow: hidden;
+	}
+}
+
+[class*="__container"] {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding-left: 60px;
+	padding-right: 60px;
+	@media only screen and (max-width: 992px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@media screen and (max-width: 767px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
+section {
+	margin-top: 100px;
+	@media only screen and(max-width: 992px) {
+		margin-top: 64px;
+	}
+	@media screen and (max-width: 767px) {
+		margin-top: 32px;
+	}
+}
+
+.section-first {
+	margin-top: 167px;
+	@media screen and (max-width: 767px) {
+		margin-top: 148px;
+	}
+}
+
+.title {
+	margin-bottom: 24px;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 16px;
+	}
+}
+
+.pd-top {
+	padding-top: 36px;
+	@media only screen and (max-width: 992px) {
+		padding-top: 56px;
+	}
+	@media screen and (max-width: 767px) {
+		padding-top: 84px;
+	}
+}
+
+.flex--row {
+	@include flex-basic(row, center, space-between);
+}
+
+.flex--column {
+	@include flex-basic(column, center, space-between);
+}
+
+.flex--between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.d-flex {
+	display: flex;
+}
+
+// #wpadminbar {
+// 	display: none;
+// }
+
+// @media only screen and(max-width: 1440px) {
+// }
+// @media only screen and (max-width: 1024px) {
+// }
+// @media only screen and (max-width: 992px) {
+// }
+// @media screen and (max-width: 767px) {
+// }

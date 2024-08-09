@@ -1,0 +1,85 @@
+.wpcf7-form {
+  &.invalid {
+    .wpcf7-submit {
+      margin-top: 32px;
+    }
+    label {
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url("../img/error-icon.svg");
+        background-repeat: no-repeat;
+        width: 27px;
+        height: 26px;
+        position: absolute;
+        z-index: 1;
+        top: 11px;
+        right: 14px;
+      }
+    }
+  }
+  label {
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid $color-w-grey;
+  }
+  .wpcf7-tel {
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.16px;
+    &::placeholder {
+      color: #5c5c5c;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .wpcf7-submit {
+    position: relative;
+    display: block;
+    border-radius: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+    padding: 12px 40px;
+    background: $color-b-green;
+    width: 100%;
+    color: $color-main;
+    font-size: 1.125em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 173%;
+    letter-spacing: 0.18px;
+    transition: background 0.25s ease;
+    appearance: none;
+    &:disabled {
+      z-index: -1;
+    }
+    @media only screen and (max-width: 992px) {
+      font-size: 0.875em;
+      line-height: 128%;
+      letter-spacing: 0.14px;
+      padding: 13px 40px;
+    }
+    &:hover {
+      background: $color-green;
+    }
+  }
+  .wpcf7-spinner,
+  .wpcf7-response-output {
+    display: none;
+  }
+  .wpcf7-not-valid-tip {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #c53a35;
+    position: absolute;
+    left: -51px;
+    bottom: -25px;
+  }
+}

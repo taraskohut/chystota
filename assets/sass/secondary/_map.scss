@@ -1,0 +1,61 @@
+.secondary-map {
+  @media only screen and (max-width: 992px) {
+    margin-top: 92px;
+  }
+  iframe {
+    width: 100%;
+    height: calc(100vh - 100px);
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.15);
+    @media only screen and (max-width: 992px) {
+      height: calc(100vh - 92px);
+    }
+  }
+  &__row {
+    position: relative;
+  }
+  &__content {
+    position: absolute;
+    right: 0;
+    bottom: 25vh;
+    background: $color-main;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    @include max-width(480px);
+    @media only screen and (max-width: 992px) {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+  &__header {
+    padding: 20px;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  &__item {
+    margin-top: 16px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__body {
+    padding: 20px;
+    a {
+      display: block;
+      width: max-content;
+      transition: opacity 0.25s;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    p,
+    a {
+      font-size: 14px;
+      line-height: 128%;
+      &.grey {
+        color: #a0a0a0;
+      }
+      &:not(.grey) {
+        margin-top: 4px;
+      }
+    }
+  }
+}

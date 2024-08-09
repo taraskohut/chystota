@@ -1,0 +1,35 @@
+.page-404 {
+  height: calc(100vh - 100px);
+  margin-bottom: -24px;
+  @media screen and (max-width: 767px) {
+    height: calc(100vh - 95px);
+    margin-top: 95px;
+  }
+  &__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__text {
+    @media screen and (max-width: 767px) {
+      font-size: 1em;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__button {
+    text-align: center;
+    margin-top: 70px;
+    background: $color-secondary;
+    @include max-width(400px);
+    &:hover {
+      background-color: $color-black;
+    }
+  }
+}

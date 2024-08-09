@@ -1,0 +1,20 @@
+.breadcrumb {
+  &__body {
+    a {
+      color: $color-green;
+      transition: color 0.25s;
+      &:hover {
+        color: $color-d-grey;
+      }
+    }
+    .separator {
+      background-image: url("../img/separator.svg");
+      background-repeat: no-repeat;
+      background-position-x: center;
+      background-position-y: 8px;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+    }
+  }
+}

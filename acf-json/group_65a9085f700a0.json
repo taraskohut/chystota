@@ -1,0 +1,67 @@
+{
+    "key": "group_65a9085f700a0",
+    "title": "Додаткові поля \"Місто\"",
+    "fields": [
+        {
+            "key": "field_65a9085fa5d72",
+            "label": "Переклад міста",
+            "name": "post-city_translation",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Вказувати місто ЛИШЕ англійською мовою на усіх перекладах. Назва міста у перекладах повинна збігатися для правильного відображення випадаючого списку міст.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "translations": "copy_once",
+            "maxlength": "",
+            "placeholder": "Зразок: Lviv",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65a9b28edba6e",
+            "label": "Ми працюємо у:",
+            "name": "post-city_work",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Львові",
+            "translations": "translate",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "city_post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709046299
+}

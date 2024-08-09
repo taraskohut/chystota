@@ -1,0 +1,82 @@
+h1,
+.h1,
+h2,
+.h2 {
+  font-family: $primary-font;
+  color: $color-secondary;
+}
+h1,
+.h1 {
+  @include responsive-font(2.25rem, 1.625rem, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+  @media screen and (max-width: 767px) {
+    line-height: normal;
+    letter-spacing: 0.36px;
+  }
+}
+h2,
+.h2 {
+  @include responsive-font(1.5em, 1.125rem, 1.125rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 167%;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+h3,
+.h3 {
+  @include responsive-font(1.875rem, 1.125rem, 1.125rem);
+  color: $color-secondary;
+  line-height: 120%;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+h4,
+.h4 {
+  @include responsive-font(1.5em, 1.5em, 1em);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+}
+h5,
+.h5 {
+  @include responsive-font(1.25em, 1.25em, 1.125em);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+  color: $color-secondary;
+}
+h6,
+.h6,
+.menu a {
+  @include responsive-font(1em, 0.875em, 0.875em);
+  color: $color-black;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+p,
+a,
+.seo-block__text li,
+.instant-support__seo li {
+  @include responsive-font(1.125em, 1.125em, 1.125em);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 178%;
+}
+.sub_menu {
+  a {
+    color: #ebebeb;
+    font-size: 0.875em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

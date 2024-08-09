@@ -1,0 +1,107 @@
+.blog-chystota {
+  &__row {
+    margin-bottom: 24px;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+    }
+  }
+  &__title {
+    svg {
+      vertical-align: bottom;
+      margin-left: 8px;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  &__posts {
+    display: grid;
+    grid-template-columns: 485px 1fr;
+    grid-column-gap: 30px;
+    grid-template-rows: repeat(3, 150px);
+    grid-row-gap: 16px;
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+    }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 8px;
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+  .archive {
+    @media screen and (max-width: 767px) {
+      padding: 12px;
+      &__content {
+        padding: 0;
+        gap: 12px;
+      }
+      .archive__bottom {
+        a,
+        p,
+        span {
+          font-size: 1.125em;
+        }
+      }
+      .archive__dot {
+        &.first {
+          display: none;
+        }
+      }
+      &:not(:nth-child(1)) {
+        .archive__image {
+          display: none;
+        }
+      }
+      .archive__line {
+        order: 4;
+        flex-basis: 100%;
+      }
+    }
+    &:nth-child(1) {
+      @include max-width(483px);
+      gap: 24px;
+      flex-direction: column;
+      grid-area: 1 / 1 / 4 / 2;
+      @media only screen and (max-width: 1024px) {
+        max-width: unset;
+      }
+      @media screen and (max-width: 767px) {
+        gap: 8px;
+      }
+      .archive__image {
+        height: 255px;
+        max-width: unset;
+        @media screen and (max-width: 767px) {
+          height: auto;
+        }
+      }
+      .archive__desc {
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
+      }
+      .archive__content {
+        gap: 12px;
+        padding: 0;
+        @media screen and (max-width: 767px) {
+          gap: 8px;
+        }
+      }
+      .archive__bottom {
+        flex-wrap: wrap;
+        margin-top: 12px;
+        @media screen and (max-width: 767px) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

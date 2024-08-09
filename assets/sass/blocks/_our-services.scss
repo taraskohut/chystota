@@ -1,0 +1,75 @@
+.our-services {
+  &__text {
+    p {
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__service {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+    margin-top: 50px;
+    @media only screen and (max-width: 1024px) {
+      gap: 15px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 12px;
+      gap: 8px;
+    }
+  }
+  &__item {
+    flex: 0 1 calc(25% - 23px);
+    border: 3.5px solid $color-green;
+    border-radius: 21px;
+    padding: 20px;
+    min-height: 277px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+    position: relative;
+    @media only screen and (max-width: 1024px) {
+      flex: 0 1 calc(33.3% - 10px);
+    }
+    @media screen and (max-width: 767px) {
+      flex: 0 1 calc(50% - 4px);
+      padding: 12px;
+      min-height: auto;
+    }
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 8px;
+      @media screen and (max-width: 767px) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  &__item-price {
+    margin-top: auto;
+    color: $color-green;
+    line-height: 3.1em;
+    @media screen and (max-width: 767px) {
+      line-height: 156%;
+    }
+  }
+  &__item-top {
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 10px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background: $color-yellow;
+    @media screen and (max-width: 767px) {
+      padding: 9px 12px;
+      font-size: 0.75em;
+    }
+  }
+}

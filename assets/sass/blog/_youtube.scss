@@ -1,0 +1,144 @@
+.blog-youtube {
+  &__content {
+    gap: 30px;
+    padding-top: 24px;
+    @media only screen and (max-width: 992px) {
+      gap: 16px;
+      padding-top: 16px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      scrollbar-color: transparent transparent;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+  &__link {
+    &.mobile {
+      @media only screen and (max-width: 1024px) {
+        display: block;
+        width: max-content;
+        margin: 0 auto;
+        margin-top: 16px;
+      }
+    }
+  }
+  &__item {
+    flex: 0 1 33.3%;
+    padding: 16px;
+    position: relative;
+    background: $color-w-grey;
+    border-radius: 20px;
+    max-width: calc(33.3% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media only screen and (max-width: 992px) {
+      padding: 12px;
+      max-width: 290px;
+      flex: 0 1 100%;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    ul,
+    p {
+      margin-top: 12px;
+      @media screen and (max-width: 767px) {
+        font-size: 1.25em;
+        margin-top: 8px;
+      }
+    }
+    li {
+      font-size: 1.125em;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 178%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @media screen and (max-width: 767px) {
+        font-size: 0.9em;
+        opacity: 0.8;
+        line-height: 155%;
+      }
+    }
+  }
+  &__time {
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+    right: 23px;
+    width: 48px;
+    height: 56px;
+    color: $color-main;
+    text-align: center;
+    font-weight: 600;
+    background-image: url("../img/bookmark.svg");
+    background-repeat: no-repeat;
+  }
+  &__image {
+    overflow: hidden;
+    border-radius: 12px;
+    display: block;
+    img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+      @media screen and (max-width: 767px) {
+        height: 160px;
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+    @media screen and (max-width: 767px) {
+      margin-top: 8px;
+      font-size: 1.25em;
+      gap: 16px;
+      svg {
+        width: 108px;
+        height: auto;
+      }
+    }
+  }
+  &__url {
+    align-items: center;
+    gap: 16px;
+    margin-top: 23px;
+    color: $color-secondary;
+    font-weight: 600;
+    max-width: max-content;
+    @media screen and (max-width: 767px) {
+      font-size: 1.25em;
+      margin-top: 13px;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    svg {
+      transition: all 0.3s ease-in-out;
+      border-radius: 50%;
+      path {
+        transition: stroke 0.3s ease-in-out;
+      }
+    }
+    &:hover {
+      svg {
+        transform: rotate(-45deg);
+        background: $color-green;
+        path {
+          stroke: $color-main;
+        }
+      }
+    }
+  }
+}

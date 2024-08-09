@@ -1,0 +1,197 @@
+.single-banner {
+  padding: 24px 0 56px 0;
+  background: rgba(33, 160, 104, 0.1);
+  margin-top: 100px;
+  @media screen and (max-width: 767px) {
+    padding: 16px 0;
+  }
+  &__switcher {
+    border-radius: 40px;
+    background: $color-main;
+    padding: 2px;
+    gap: 2px;
+    li {
+      border-radius: 400px;
+      transition: all 0.25s;
+      cursor: pointer;
+      a {
+        transition: color 0.25s;
+      }
+      &.active {
+        background: $color-green !important;
+        a {
+          color: $color-main;
+        }
+      }
+      &:hover {
+        background: $color-hover-green;
+        a {
+          color: $color-main;
+        }
+      }
+      a {
+        padding: 0px 14px;
+        font-weight: 600;
+        line-height: 156%;
+        letter-spacing: 0.18px;
+        color: $color-secondary;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__back {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 16px 11px 8px;
+    border-radius: 12px;
+    border: 1px solid #e3e3e3;
+    color: $color-secondary;
+    transition: all 0.25s;
+    @media only screen and (max-width: 992px) {
+      padding: 7px 16px 7px 8px;
+      line-height: 155%;
+    }
+    svg {
+      path {
+        transition: stroke 0.25s;
+      }
+    }
+    &:hover {
+      background: $color-green;
+      color: $color-main;
+      svg {
+        path {
+          stroke: $color-main;
+        }
+      }
+    }
+  }
+  &__language {
+    gap: 24px;
+    align-items: center;
+  }
+  &__content {
+    gap: 30px;
+    margin-top: 24px;
+    justify-content: space-between;
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column-reverse;
+      margin-top: 12px;
+      gap: 12px;
+    }
+  }
+  &__title {
+    font-size: 1.5em;
+    line-height: 167%;
+    letter-spacing: 0.48px;
+    @media only screen and (max-width: 992px) {
+      font-size: 1.125em;
+      line-height: normal;
+      letter-spacing: 0.36px;
+    }
+  }
+  &__author {
+    gap: 12px;
+    align-items: center;
+    margin-top: 32px;
+    @media only screen and (max-width: 992px) {
+      margin-top: 12px;
+    }
+    svg {
+      width: 56px;
+      height: 56px;
+    }
+  }
+  &__author-name,
+  &__author-position {
+    font-size: 1em;
+    line-height: 140%;
+    @media screen and (max-width: 767px) {
+      font-size: 1.125em;
+      letter-spacing: 0.18px;
+    }
+  }
+  &__author-name {
+    color: $color-secondary;
+    margin-bottom: 4px;
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 0;
+    }
+  }
+  &__author-position {
+    color: #626262;
+  }
+  &__dot {
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+  &__data {
+    gap: 12px;
+    margin-top: 16px;
+    align-items: flex-start;
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+      gap: 4px;
+    }
+    p {
+      font-size: 1em;
+      color: #626262;
+      @media screen and (max-width: 767px) {
+        font-size: 1.125em;
+        line-height: 155%;
+      }
+      span {
+        color: $color-secondary;
+        margin-left: 6px;
+      }
+    }
+  }
+  &__share {
+    margin-top: 46px;
+    @media only screen and (max-width: 992px) {
+      margin-top: 24px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 16px;
+    }
+  }
+  &__share-title {
+    color: $color-secondary;
+    @media screen and (max-width: 767px) {
+      font-size: 1.125em;
+    }
+  }
+  &__wrapper {
+    gap: 16px;
+    margin-top: 12px;
+    @media screen and (max-width: 767px) {
+      margin-top: 8px;
+    }
+  }
+  &__item {
+    rect {
+      transition: fill 0.25s ease-in-out;
+    }
+    &:hover {
+      rect {
+        fill: #229ed9;
+      }
+    }
+  }
+  &__image {
+    img {
+      border-radius: 20px;
+      max-width: 585px;
+      height: 350px;
+      object-fit: cover;
+      @media only screen and (max-width: 1024px) {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}

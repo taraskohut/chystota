@@ -1,0 +1,92 @@
+.cky-consent-container {
+  .cky-banner-bottom {
+    .cky-notice-des {
+      display: flex;
+      &:before {
+        content: "";
+        margin-bottom: -8px;
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        background-image: url("../img/cookies.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-right: 16px;
+      }
+      span {
+        color: $color-green;
+      }
+      p {
+        font-family: $secondary-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        letter-spacing: 0.16px;
+        display: inline-block;
+        width: fit-content;
+      }
+    }
+    .cky-btn.cky-btn-accept {
+      border-radius: 8px;
+      padding: 11px 40px;
+      font-family: $secondary-font;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18px;
+      letter-spacing: 0.14px;
+      width: 150px;
+    }
+    .cky-consent-bar {
+      padding: 32px 56px;
+      max-width: 1200px;
+      margin: 0 auto 16px;
+      border-radius: 16px;
+      position: relative;
+      .cky-banner-btn-close img {
+        height: 24px;
+        width: 24px;
+        margin: 0;
+        filter: brightness(0.5);
+        position: absolute;
+        top: 12px;
+        right: 12px;
+      }
+    }
+  }
+}
+.cky-custom-brand-logo-wrapper,
+.cky-notice .cky-title,
+.cky-notice-des,
+.cky-notice-btn-wrapper {
+  margin-left: 0;
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .cky-consent-container.cky-banner-bottom .cky-notice-des {
+    flex-direction: column;
+  }
+
+  .cky-consent-container.cky-banner-bottom .cky-consent-bar {
+    padding: 16px;
+    margin: 0 auto 0;
+  }
+  .cky-consent-bar .cky-banner-btn-close img {
+    height: 18px;
+    width: 18px;
+  }
+  .cky-custom-brand-logo-wrapper,
+  .cky-notice .cky-title,
+  .cky-notice-des,
+  .cky-notice-btn-wrapper {
+    padding: 0;
+  }
+  .cky-consent-container.cky-banner-bottom .cky-btn.cky-btn-accept {
+    width: 100%;
+  }
+  .cky-consent-container.cky-banner-bottom .cky-notice-des:before {
+    margin-bottom: -4px;
+  }
+}

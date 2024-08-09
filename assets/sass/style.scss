@@ -1,0 +1,70 @@
+// utilities
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/keyframes";
+
+// base
+@import "base/normalize";
+@import "base/fonts";
+@import "base/general";
+@import "base/typography";
+@import "base/placeholders";
+
+// components
+@import "components/buttons";
+@import "components/forms";
+@import "components/slider";
+@import "components/popup";
+@import "components/sidebar";
+
+// layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/nav";
+
+// pages
+@import "pages/404";
+
+// blocks
+@import "blocks/banner";
+@import "blocks/our-services";
+@import "blocks/basic-cleaning";
+@import "blocks/additional-services";
+@import "blocks/about-us";
+@import "blocks/modern-team";
+@import "blocks/instant-support";
+@import "blocks/seo-block";
+@import "blocks/our-works";
+@import "blocks/social-responsibility";
+@import "blocks/trust-cleaning";
+@import "blocks/reviews";
+@import "blocks/answers-questions";
+@import "blocks/cost-cleaning";
+@import "blocks/blog-chystota";
+@import "blocks/cleaning-stages";
+@import "blocks/windows-balconies";
+@import "blocks/price-of-window";
+@import "blocks/services-cleaning";
+@import "blocks/cost-of-cleaning";
+
+//items
+@import "items/post";
+@import "items/breadcrumb";
+
+//single
+@import "single/banner";
+@import "single/content";
+
+//blog
+@import "blog/banner";
+@import "blog/social-networks";
+@import "blog/youtube";
+@import "blog/posts";
+
+//secondary
+@import "secondary/map.scss";
+@import "secondary/reviews.scss";
+@import "secondary/answers-questions";
+@import "secondary/prices";
+@import "secondary/banner";
+@import "secondary/privacy-policy";

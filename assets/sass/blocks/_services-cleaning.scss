@@ -1,0 +1,120 @@
+.services-cleaning {
+  &__row {
+    gap: 50px;
+    @media only screen and(max-width: 992px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  &__header {
+    flex: 0 1 55%;
+  }
+  &__text {
+    font-size: 1.5em;
+    @media only screen and(max-width: 992px) {
+      font-size: 1em;
+      line-height: 158%;
+    }
+  }
+  &__advertisement,
+  &__header {
+    flex: 0 1 50%;
+  }
+  &__adtext {
+    margin-top: 30px;
+    font-size: 0.875em;
+    background: $color-yellow;
+    border-radius: 12px;
+    color: $color-secondary;
+    padding: 12px;
+    @include max-width(360px);
+    text-align: center;
+    @media only screen and(max-width: 992px) {
+      max-width: unset;
+      margin-top: 24px;
+    }
+  }
+  &__services {
+    gap: 30px;
+    margin-top: 50px;
+    @media only screen and(max-width: 992px) {
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+  }
+  &__item {
+    flex: 0 1 25%;
+    background: #eae9e6;
+    padding: 30px 15px;
+    min-height: 310px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media only screen and(max-width: 992px) {
+      flex: 0 1 calc(50% - 4px);
+    }
+    @media screen and (max-width: 767px) {
+      min-height: 174px;
+      padding: 10px;
+    }
+    .item__title {
+      text-transform: uppercase;
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+    .item__price {
+      margin-bottom: 88px;
+      width: max-content;
+      padding: 5px 8px;
+      border-radius: 6px;
+      background: #f8f8f8;
+      color: #5c5c5c;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 58px;
+        font-size: 0.75em;
+      }
+    }
+    img {
+      position: absolute;
+      transition: all 0.2s;
+      bottom: -10px;
+      right: 0;
+      width: 201px;
+      height: auto;
+      @media screen and (max-width: 767px) {
+        bottom: -15px;
+        width: 150px;
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(3) {
+      color: $color-main;
+      .h5 {
+        color: $color-main;
+      }
+    }
+    &:nth-child(1) {
+      background: $color-green;
+      .item__price {
+        background: #29ab72;
+      }
+    }
+    &:nth-child(3) {
+      background: #86adc2;
+      .item__price {
+        background: #8fb6cb;
+      }
+    }
+    &:hover {
+      img {
+        bottom: -30px;
+        right: -15px;
+      }
+    }
+  }
+}

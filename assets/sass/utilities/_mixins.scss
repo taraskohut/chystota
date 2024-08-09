@@ -1,0 +1,31 @@
+@mixin flex-basic($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin max-width($width) {
+    max-width: $width;
+    width: 100%;
+}
+
+@mixin responsive-font($desktop, $tablet, $mobile) {
+    font-size: $desktop;
+
+    @media only screen and(max-width: 992px) {
+        font-size: $tablet;
+    }
+
+    @media only screen and(max-width: 600px) {
+        font-size: $mobile;
+    }
+}

@@ -1,0 +1,57 @@
+.cleaning-stages {
+  &__row {
+    padding: 48px 56px;
+    border-radius: 12px;
+    background: rgba(33, 160, 104, 0.1);
+    @media only screen and (max-width: 1024px) {
+      padding: 24px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 16px;
+    }
+  }
+  &__content {
+    gap: 30px;
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  &__title {
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 24px;
+    }
+  }
+  &__list {
+    flex: 0 1 50%;
+  }
+  &__step {
+    margin-bottom: 16px;
+    line-height: normal;
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 8px;
+    }
+  }
+  &__text {
+    margin-bottom: 32px;
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 16px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1em;
+      line-height: 158%;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__video {
+    flex: 0 1 50%;
+    margin-top: auto;
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+}

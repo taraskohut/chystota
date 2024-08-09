@@ -1,0 +1,7 @@
+.content-navigation {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 30px;
+  }
+}

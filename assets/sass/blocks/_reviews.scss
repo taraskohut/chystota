@@ -1,0 +1,94 @@
+.reviews {
+  &__row {
+    padding: 48px 56px;
+    border-radius: 12px;
+    background: rgba(33, 160, 104, 0.1);
+    @media only screen and (max-width: 1024px) {
+      padding: 24px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 16px;
+    }
+  }
+  &__ratings {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    @media only screen and(max-width: 992px) {
+      row-gap: 24px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 16px;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  &__item {
+    width: calc(33.3% - 27px);
+    @media only screen and(max-width: 992px) {
+      width: calc(50% - 20px);
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  &__name,
+  &__rating {
+    font-size: 1.125em;
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__main {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  &__bottom {
+    position: relative;
+    transition: color 0.25s;
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $color-d-green;
+      transition: background 0.25s;
+    }
+    &:hover {
+      color: $color-green;
+      &::before {
+        background: $color-green;
+      }
+    }
+  }
+  &__line {
+    margin: 8px 0;
+    height: 3px;
+    background: #8b928c;
+    width: 100%;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(var(--rating) / 5 * 100%);
+      height: 100%;
+      background: $color-green;
+    }
+  }
+  &__script {
+    margin-top: 32px;
+    @media only screen and(max-width: 992px) {
+      margin-top: 20px;
+    }
+    .cuoJHc {
+      min-height: 257.4px;
+    }
+  }
+}

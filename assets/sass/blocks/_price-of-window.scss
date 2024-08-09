@@ -1,0 +1,123 @@
+.price-of-window {
+  &__row {
+    border-radius: 12px;
+    background: #f8f8f8;
+    padding: 48px 56px;
+    @media only screen and (max-width: 1024px) {
+      padding: 24px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 16px;
+    }
+  }
+  &__title {
+    margin-bottom: 32px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+    }
+  }
+  &__items {
+    gap: 183px;
+    @media only screen and (max-width: 1024px) {
+      gap: 16px;
+    }
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    padding: 24px;
+    border-radius: 12px;
+    background: $color-main;
+    @media only screen and (max-width: 992px) {
+      padding: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 12px;
+    }
+    &:first-child {
+      margin-bottom: 16px;
+    }
+  }
+  &__box {
+    @include max-width(500px);
+    display: block;
+    position: relative;
+    @media only screen and (max-width: 1024px) {
+      max-width: 450px;
+    }
+    @media only screen and (max-width: 992px) {
+      max-width: unset;
+    }
+    .slider-navigation {
+      top: unset;
+      bottom: 48%;
+    }
+  }
+  &__text {
+    margin-bottom: 24px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 8px;
+      font-size: 1em;
+      line-height: 140%;
+    }
+  }
+  &__gallery {
+    img {
+      border-radius: 12px;
+    }
+  }
+  .item {
+    &__subtext,
+    &__price,
+    &__title {
+      color: $color-green;
+    }
+    &__title {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 4px;
+      }
+    }
+    &__text {
+      @media screen and (max-width: 767px) {
+        line-height: 155%;
+        letter-spacing: 0.18px;
+      }
+    }
+    &__prices {
+      gap: 8px;
+      margin: 12px 0;
+    }
+    &__body {
+      padding: 12px;
+      border-radius: 12px;
+      background: $color-w-green;
+      width: 100%;
+    }
+    &__price {
+      font-size: 1.25em;
+      color: $color-green;
+      line-height: normal;
+      letter-spacing: 0.4px;
+      margin-bottom: 4px;
+      @media screen and (max-width: 767px) {
+        font-size: 1.125em;
+      }
+    }
+    &__subtitle {
+      @media screen and (max-width: 767px) {
+        line-height: 155%;
+      }
+    }
+    &__subtext {
+      font-size: 0.875em;
+      font-weight: 600;
+      line-height: 128%;
+      letter-spacing: 0.14px;
+      @media screen and (max-width: 767px) {
+        font-size: 0.75em;
+        letter-spacing: 0.12px;
+      }
+    }
+  }
+}
